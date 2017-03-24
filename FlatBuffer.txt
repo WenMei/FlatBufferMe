@@ -1,0 +1,21 @@
+
+    http://www.race604.com/flatbuffers-intro/
+
+    FlatBuffers 是一个开源的跨平台数据序列化库，可以应用到几乎任何语言（C++, C#, Go, Java, JavaScript, PHP, Python），
+最开始是 Google 为游戏或者其他对性能要求很高的应用开发的。
+    项目地址 GitHub  https://github.com/google/flatbuffers；
+    官方的文档 http://google.github.io/flatbuffers/index.html
+
+    FlatBuffer的优点
+   FlatBuffer相对于其他序列化技术，例如XML、JSON、Protocol Buffers等，优势：
+ 1.直接读取序列化数据，而不需要解析（Parsing）或者解包（Unpacking）；
+   FlatBuffer把数据层级结构保存在一个扁平化的二进制缓存（一维数组）中，同时能够保持直接获取里面的结构化数据，而不需要解析，
+   并且还能保证数据结构变化的前后向兼容；
+ 2.高效的内存使用和速度：FlatBuffer使用过程中，不需要额外的内存，几乎接近原始数据在内存中的大小。
+ 3.灵活：数据能够前后兼容，并且能够灵活控制你的数据结构。
+ 4.很少的代码侵入性：使用少量的自动生成的代码即可实现。
+ 5.强数据类型，易于使用，跨平台，几乎语言无关。
+
+       FlatBuffers 的使用方法
+       首先按照使用特定的 IDL 定义数据结构 schema，
+       然后使用编译工具 flatc 编译 schema 生成对应的代码，把生成的代码应用到工程中即可。
